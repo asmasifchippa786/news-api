@@ -1,0 +1,242 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.nav1{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+.loader{
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  right: 40%;
+  bottom: 50%;
+}
+.body
+{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.serach input{
+ font-size: 20px;
+ border: none;
+ outline: none;
+}
+.serach button{
+  font-size: 20px;
+  border: none;
+  outline: none;
+}
+.icons i{
+  font-size: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.center{
+  padding: 10px;
+}
+.right
+{
+
+    padding: 10px;
+    padding: 20px;
+    margin: 20px;
+  
+}
+.post{
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid rgb(216, 216, 216) ;
+  border-radius: 20px;
+}
+.post .header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile .img img{
+  width: 50px;
+  height: 50px;
+}
+.desc-img{
+  display: flex;
+  justify-content: space-between;
+}
+.desc-img img{
+ width: 300px;
+ opacity: 0.8;
+ border-radius: 23px;
+}
+.desc-img img:hover{
+  opacity: 1;
+  outline: 3px solid black;
+ }
+.desc{
+  margin-right: 20px;
+}
+.text1{
+  font-size: 25px;
+}
+.text1 a{
+  font-size: 24px;
+}
+.text1 a:hover{
+  text-decoration: none;
+  color: rgb(0, 132, 233);
+}
+.opilu{
+  margin-left: 20px;
+  font-weight: bold;
+}
+.header{
+  margin-bottom: 20px;
+}
+.tret{
+  font-size: 20px;
+  margin-top: 20px;
+
+}
+.date{
+  font-size: 14px;
+  color: grey;
+}
+.profile .img img{
+  border-radius: 50%;
+}
+/* .imokp{
+  height: 100vh;
+  position: relative;
+  width: 100% ;
+}
+.imokp .img{
+  background-image:  url('https://static.vecteezy.com/system/resources/thumbnails/004/216/831/original/3d-world-news-background-loop-free-video.jpg');
+  height: 100vh;
+  width: 100% ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.imokp .text{
+  position: absolute;
+  top: 50%;
+  left: 40%;
+ right: 40%;
+  font-size: 80px;
+  background-color: white;
+  text-align: center;
+  padding: 5px;
+}
+@media (max-width:2000px) {
+  .imokp .text{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+   right: 40%;
+    font-size: 60px;
+    background-color: white;
+    text-align: center;
+    padding: 5px;
+  }
+} */
+@media (max-width: 1024px) {
+  .text1 a{
+    font-size: 18px;
+  }
+  .tret{
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .desc-img img{
+    width: 200px;
+    height: 100px;
+    opacity: 0.8;
+    border-radius: 23px;
+   }
+   .loader{
+    left: 35%;
+   }
+}
+@media (max-width: 425px) {
+  .desc-img{
+    display: block;
+  }
+   .text1{
+    font-size: 13px;
+  }
+  .date{
+    font-size: 7px;
+    color: grey;
+  }
+  .desc-img img{
+    width: 100%;
+    height: 200px;
+    opacity: 1;
+   }
+   .tret{
+    font-size: 13px;
+    margin-bottom: 20px;
+   }
+   .desc-img .text1{
+    font-size: 13px;
+   }
+  .inputSearch{
+    font-size: 10px;
+  }
+   .icons i{
+     font-size: 18px;
+     border: none;
+     outline: none;
+     cursor: pointer;
+   }
+   .logoName h1{
+    font-size: 18px;
+   }
+   .serach input{
+    font-size: 10px;
+    border: none;
+    outline: none;
+   }
+   .serach button{
+     font-size: 10px;
+     border: none;
+     outline: none;
+   }
+   .loader{
+    width: 100px;
+    left: 20%;
+   }
+}
+@media (max-width:375px) {
+  .center{
+    padding: 0px;
+  }
+  .body{
+    padding: 0;
+  }
+  .post{
+    padding: 20px;
+    margin: 0px;
+    border: 1px solid rgb(216, 216, 216) ;
+    border-radius: 20px;
+  }
+  .loader{
+    width: 100px;
+    left: 10%;
+   }
+}
