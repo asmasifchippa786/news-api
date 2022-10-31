@@ -3,15 +3,39 @@ import { useState, useEffect } from "react";
 
 import axios from "axios";
 import moment from "moment";
+import { setSelectionRange } from "@testing-library/user-event/dist/utils";
 
 function App() {
   const [data, setData] = useState([]);
   const [query, setQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [weaData, setWeaData] = useState([]);
 
   useEffect(() => {
 
+    
+        
     function getTrendingNews() {
+
+      if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(suc , err)
+
+      }else{
+        console.log('your browser not support')
+      }
+      function suc(position){
+        console.log(position.coords.latitude, position.coords.longitude)
+        axios.request(`https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=f19b2fe9326d65429d44f47d77af6bab`).then(function (response) {
+        console.log(response.data);
+        setWeaData(response.data)
+      }).catch(function (error) {
+
+      });
+      }
+      function err(error){
+        console.log(error)
+      }
+    
 
       const options = {
         method: 'GET',
@@ -37,6 +61,8 @@ function App() {
     getTrendingNews();
 
   }, [])
+
+  const icon = weaData.weather[0].icon
 
   const getNews = (e) => {
     e.preventDefault();
@@ -152,7 +178,36 @@ function App() {
             </div>
           ))}
         </div>
-   
+        <div className="right">
+          <div className="wrapper">
+          <div className="header">
+            <div className="icon">
+                <img src={`http://openweathermap.org/img/w/${icon}.png`}/>
+            </div>
+            <div className="heading">
+                  {weaData.weather[0].description}
+            </div>
+            </div>
+            <div className="details">
+            <div className="type">
+                <div className="humi">
+
+                </div>
+                <div className="max">
+
+                </div>
+                <div className="min">
+
+                </div>
+                </div>
+                <div className="wind">
+                        <div className="speed">
+
+                        </div>
+                </div>
+            </div>
+          </div>
+        </div>
       </div>
       )}
     </div>
